@@ -1,0 +1,9 @@
+### Test Creating User
+POST http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"murad",
+    "email":"murad@gmail.com"
+}
