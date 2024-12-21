@@ -1,9 +1,37 @@
-### Test Creating User
-POST http://localhost:3000/users/create
+### SignUp
+POST http://localhost:3000/users/signUp
 Content-Type: application/json
 
 {
-    "id":1,
-    "name":"murad",
-    "email":"murad@gmail.com"
+    "email":"Ahmad@gmail.com",
+    "name":"Ahmad",
+    "password":"Ahmad123$@!"
 }
+
+### LogIn
+POST http://localhost:3000/users/logIn
+Content-Type: application/json
+
+{
+    "email":"murad@gmail.com",
+    "password":"Murad123$"
+}
+
+### Sign Out
+POST http://localhost:3000/users/signOut
+
+### Update  
+PATCH http://localhost:3000/users/4
+Content-Type: application/json
+
+{
+    "email":"updatedUser2@gmail.com",
+    "name":"updatedUser2",
+    "password":"Password2$"
+}
+
+### remove 
+DELETE  http://localhost:3000/users/4
+
+### Who am i
+GET http://localhost:3000/users/whoami
