@@ -1,0 +1,4 @@
+"id","make","model","year","mileage","lng","lat","price","userId","approve"
+1,"Toyota","Corolla",1980,100000,"0","25","500000.00",5,True
+2,"Toyotaaa--","Corolla--",1980,100000,"0","25","500000.00",6,False
+3,"Nisan","CCCCC",1990,200000,"25","25","600000.00",6,True
