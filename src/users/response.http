@@ -1,37 +1,37 @@
-### SignUp
-POST http://localhost:3000/users/signUp
+    ### SignUp
+POST http://localhost:3000/auth/signUp
+Content-Type: application/json
+
+{
+    "email":"Abood@gmail.com",
+    "name":"AboodMurad",
+    "password":"AboodMurad1$"
+}
+
+### LogIn
+POST http://localhost:3000/auth/logIn
+Content-Type: application/json
+
+{
+    "email":"Ahmad@gmail.com",
+    "password":"Ahmad123$@!"
+}
+
+### Sign Out
+POST http://localhost:3000/auth/signOut
+
+### Update  
+PATCH http://localhost:3000/auth/4
 Content-Type: application/json
 
 {
     "email":"Ahmad@gmail.com",
     "name":"Ahmad",
-    "password":"Ahmad123$@!"
-}
-
-### LogIn
-POST http://localhost:3000/users/logIn
-Content-Type: application/json
-
-{
-    "email":"murad@gmail.com",
-    "password":"Murad123$"
-}
-
-### Sign Out
-POST http://localhost:3000/users/signOut
-
-### Update  
-PATCH http://localhost:3000/users/4
-Content-Type: application/json
-
-{
-    "email":"updatedUser2@gmail.com",
-    "name":"updatedUser2",
-    "password":"Password2$"
+    "admin":true
 }
 
 ### remove 
-DELETE  http://localhost:3000/users/4
+DELETE  http://localhost:3000/auth/4
 
 ### Who am i
-GET http://localhost:3000/users/whoami
+GET http://localhost:3000/auth/whoami

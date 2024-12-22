@@ -9,7 +9,7 @@ import { AuthGuard } from 'src/guards/auth.guard';
 import { CurrentUser } from './decorators/current-user.decorator';
 import { LogInUserDto } from './dto/login-user.dto';
 
-@Controller('users')
+@Controller('auth')
 @Serialize(SignUpUserDto)
 export class UsersController {
 

@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { join } from 'path';
 import { UsersModule } from './users/users.module';
+import { ReportsModule } from './reports/reports.module';
 
 @Module({
   imports: [
@@ -24,9 +25,11 @@ import { UsersModule } from './users/users.module';
         synchronize: true,
       })
     }),
-    UsersModule
+    UsersModule,
+    ReportsModule
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule { }
+

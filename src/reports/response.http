@@ -1,0 +1,24 @@
+### Create a new report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make":"Nisan",
+    "model":"CCCCC",
+    "year":1990,
+    "lng":25,
+    "lat":"25",
+    "price":600000,
+    "mileage": 200000
+}
+
+### Approve a report
+PATCH http://localhost:3000/reports/3
+Content-Type: application/json
+
+{
+    "approve": true
+}
+
+### Estimate a report
+GET http://localhost:3000/reports?make=Nisan&model=CCCCC&year=1990&lng=25&lat=25&mileage=200000
