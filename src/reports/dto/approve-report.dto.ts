@@ -1,6 +1,6 @@
-import { IsBoolean } from "class-validator";
+// import { IsBoolean } from "class-validator";
 
-export class ApproveReportDto {
-    @IsBoolean()
-    approve: boolean;
-}
+// export class ApproveReportDto {
+//     @IsBoolean()
+//     approve: boolean;
+// }

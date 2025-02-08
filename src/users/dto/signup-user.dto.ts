@@ -7,7 +7,7 @@ export class SignUpUserDto {
     @IsEmail({}, { message: "The email must be in a valid format." })
     readonly email: string;
 
-    @Expose() // Expose email in JSON responses
+    @Expose() // Expose name in JSON responses
     @IsString({ message: "The name must be a valid string." })
     @MinLength(2, { message: "The name must be at least 2 characters long." })
     @MaxLength(50, { message: "The name must not exceed 50 characters." })

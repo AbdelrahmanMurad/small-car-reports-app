@@ -1,4 +1,4 @@
-    ### SignUp
+### SignUp
 POST http://localhost:3000/auth/signUp
 Content-Type: application/json
 
@@ -13,8 +13,8 @@ POST http://localhost:3000/auth/logIn
 Content-Type: application/json
 
 {
-    "email":"Ahmad@gmail.com",
-    "password":"Ahmad123$@!"
+    "email":"Abood@gmail.com",
+    "password":"AboodMurad1$"
 }
 
 ### Sign Out

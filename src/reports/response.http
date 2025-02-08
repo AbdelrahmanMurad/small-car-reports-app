@@ -17,8 +17,12 @@ PATCH http://localhost:3000/reports/3
 Content-Type: application/json
 
 {
-    "approve": true
+    "approve": true,
+    "price": 700000
 }
 
 ### Estimate a report
 GET http://localhost:3000/reports?make=Nisan&model=CCCCC&year=1990&lng=25&lat=25&mileage=200000
+
+### Delete a report
+DELETE http://localhost:3000/reports/2

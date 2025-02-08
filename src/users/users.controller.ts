@@ -18,11 +18,6 @@ export class UsersController {
     private readonly authService: AuthService
   ) { }
 
-  // @Post('/create')
-  // create(@Body() createUserDto: CreateUserDto) {
-  //   return this.usersService.create(createUserDto);
-  // }
-
   @Post('/signUp')
   async signUp(@Body() body: SignUpUserDto, @Session() session: any) {
     const user = await this.authService.signUp(body.name, body.email, body.password)

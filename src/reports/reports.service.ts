@@ -4,7 +4,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from 'src/users/entities/user.entity';
 import { Report } from './entities/report.entity'; // Ensure this import is correct
-import { ApproveReportDto } from './dto/approve-report.dto';
+// import { ApproveReportDto } from './dto/approve-report.dto';
 import { GetEstimateDto } from './dto/get-estimate-report.dto';
 
 @Injectable()
@@ -37,10 +37,16 @@ export class ReportsService {
     return this.repo.save(report);
   }
 
-  async approveReport(id: number, approve: boolean) {
+  async updateReport(id: number, attrs: Partial<Report>) {
     const report = await this.repo.findOneBy({ id })
     if (!report) throw new Error('Report not found');
-    report.approve = approve;
+    Object.assign(report, attrs);
     return this.repo.save(report);
+  }
+
+  async remove(id: number) {
+    const report = await this.repo.findOneBy({ id })
+    if (!report) throw new Error('Report not found')
+    return this.repo.remove(report);
   }
 }
